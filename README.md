@@ -1,4 +1,4 @@
-# IsOnly Validator
+# IsOnly - validator
 
 Lightweight TypeScript validation library with fluent API.
 
