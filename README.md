@@ -1,8 +1,3 @@
-# IsOnly - validator
-
-Lightweight TypeScript validation library with fluent API.
-
-
 # IsOnly Validator
 
 🎯 Lightweight TypeScript validation library with fluent API for filtering and validating required fields in requests.
