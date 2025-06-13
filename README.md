@@ -5,12 +5,13 @@
 ## 🚀 Installation
 
 ## NPM
+https://www.npmjs.com/package/is-only
 
 npm install is-only
 
 ## ⚡ Quick Start
 
-import { isOnly } from 'isonly-validator';
+import { isOnly } from 'is-only';
 
 // Basic validation
 if (isOnly.String('hello')) {
@@ -258,7 +259,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 🐛 Issues
 
-If you find any issues, please report them on [GitHub Issues](https://github.com/your-username/isonly-validator/issues).
+If you find any issues, please report them on [GitHub Issues](https://github.com/your-username/is-only/issues).
 
 ---
 
