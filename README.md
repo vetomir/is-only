@@ -5,12 +5,14 @@
 ## 🚀 Installation
 
 ## NPM
+```
 https://www.npmjs.com/package/is-only
 
 npm install is-only
+```
 
 ## ⚡ Quick Start
-
+```
 import { isOnly } from 'is-only';
 
 // Basic validation
@@ -33,12 +35,12 @@ const value = isOnly.String('').throw();
 } catch (error) {
 console.log('Validation failed!');
 }
-
+```
 ## 🎯 Why Choose IsOnly Validator?
 
 ### ✨ **Clean & Readable Code**
 Transform verbose validation logic into elegant one-liners:
-
+```
 // ❌ Before: Verbose and error-prone
 if (typeof value === 'string' && value.trim().length > 0) {
 // logic
@@ -48,24 +50,27 @@ if (typeof value === 'string' && value.trim().length > 0) {
 if (isOnly.String(value)) {
 // logic
 }
-
+```
 ### 🔒 **TypeScript Type Safety**
 Built-in **type guards** that make TypeScript understand your data:
-
+```
 function processData(input: unknown) {
 if (isOnly.String(input)) {
 // ✅ TypeScript knows input is string
-console.log(input.toUpperCase()); // No errors!
+console.log(input.toUpperCase()); 
+// No errors!
 }}
+```
 
 ### 🚀 **Powerful Fluent API**
 Every validation returns a rich object with additional methods:
-
+```
 const result = isOnly.String(userInput);
 
 result.value // string | null - safe access
 result.empty // inverted validation
 result.throw() // throws on failure, returns value on success
+```
 
 ### 📦 **Lightweight & Zero Dependencies**
 - 🪶 **< 5KB minified** - won't bloat your bundle
@@ -74,7 +79,7 @@ result.throw() // throws on failure, returns value on success
 
 ### 💡 **Eliminates JavaScript Gotchas**
 Avoid common JavaScript pitfalls:
-
+```
 // ❌ Problematic: falsy for 0, '', false, []
 if (value) { }
 
@@ -83,7 +88,7 @@ if (isOnly.Number(value)) { }
 
 // ✅ Explicit: only non-empty strings
 if (isOnly.String(value)) { }
-
+```
 
 ## 📚 API Reference
 
@@ -176,16 +181,17 @@ Each validator returns a `ValidationResult` object with additional methods:
 
 ### `.value`
 Returns the validated value if validation passes, `null` otherwise.
-
+```
 const result = isOnly.String('hello');
 console.log(result.value); // 'hello'
 
 const failed = isOnly.String('');
 console.log(failed.value); // null
+```
 
 ### `.empty`
 Returns the inverted validation result.
-
+```
 if (isOnly.String('').empty) {
 console.log('String is empty!'); // This will execute
 }
@@ -193,7 +199,7 @@ console.log('String is empty!'); // This will execute
 if (isOnly.String('hello').empty) {
 console.log('This will not execute');
 }
-
+```
 ### `.throw()`
 Throws an error if validation fails, returns the value if it passes.
 
@@ -207,14 +213,16 @@ console.log('Validation failed!');
 ## 🎯 Use Cases
 
 ### 🌐 **API Request Validation**
+```
 function validateUser(data: any) {
 if (!isOnly.String(data.email)) throw new Error('Email required');
 if (!isOnly.Number(data.age)) throw new Error('Valid age required');
 
 return { email: data.email, age: data.age }; // ✅ Type-safe
 }
-
+```
 ### 📝 **Form Data Processing**
+```
 function filterFormData(formData: any) {
 const filtered: any = {};
 
@@ -228,8 +236,9 @@ filtered.phone = formData.phone;
 
 return filtered;
 }
-
+```
 ### 🧹 **Data Sanitization**
+```
 // ❌ Before: Complex nested conditions
 if (user.settings && typeof user.settings === 'object' &&
 Object.keys(user.settings).length > 0) {
@@ -240,7 +249,7 @@ applySettings(user.settings);
 if (isOnly.Object(user.settings)) {
 applySettings(user.settings.value);
 }
-
+```
 
 ## 🏆 **Perfect For**
 - 🌐 **API request validation**
