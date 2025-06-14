@@ -5,7 +5,7 @@
 
 ## 🚀 Installation
 
-## [NPM 🔗]([https://example.com](https://www.npmjs.com/package/is-only))
+## [🔗 NPM]([https://example.com](https://www.npmjs.com/package/is-only))
 ```
 https://www.npmjs.com/package/is-only
 
