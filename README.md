@@ -1,4 +1,5 @@
 # IsOnly Validator
+[![NPM Version](https://img.shields.io/npm/v/is-only)](https://www.npmjs.com/package/is-only)
 
 🎯 Lightweight TypeScript validation library with fluent API for filtering and validating required fields in requests.
 
